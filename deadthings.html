@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Things by Stephen Blackmoore - Amazon.in</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            text-align: center;
+        }
+        .product-image img {
+            max-width: 30%;
+            height: auto;
+        }
+        .product-details {
+            margin-top: 20px;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .product-author {
+            font-size: 18px;
+            margin-top: 5px;
+            color: #666;
+        }
+        .product-rating {
+            margin-top: 10px;
+        }
+        .product-rating span {
+            font-size: 16px;
+            color: #f90;
+        }
+        .product-price {
+            font-size: 20px;
+            color: #b12704;
+            margin-top: 10px;
+        }
+        .price-button {
+            background-color: #ff9900;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .price-button:hover {
+            background-color: #e68a00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            background-color: #ff9900;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .buttons button:hover {
+            background-color: #e68a00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .offers {
+            margin-top: 20px;
+        }
+        .offers div {
+            margin-bottom: 10px;
+        }
+        .shipping-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .shipping-info div {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            flex: 1 1 calc(33.333% - 40px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .shipping-info div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .description {
+            margin-top: 30px;
+        }
+        .follow-authors {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+ <script>
+        // Function to add the book to the cart
+        function addToCart() {
+            const book = {
+                title: "Dead Things",
+                author: "Stephen Blackmoore",
+                price: 249.99
+            };
+
+            // Get existing cart items from local storage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the new book to the cart
+            cart.push(book);
+
+            // Save the updated cart back to local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Optionally, redirect to cart page
+            window.location.href = 'cart.html';
+        }
+    </script>
+
+
+<body>
+    <div class="container">
+        <div class="product-image">
+            <img src="deadthings.png" alt="Dead Things">
+        </div>
+        <div class="product-details">
+            <div>
+                <div class="product-title">Dead Things</div>
+                <div class="product-author">by Stephen Blackmoore (Author)</div>
+                <div class="product-rating">
+                    <span>4.6</span> ★★★★☆ (1,42,005 ratings)
+                </div>
+                <div class="product-price">Paperback – 3 October 2017</div>
+                <button class="price-button">₹249.99</button>
+                <div class="buttons">
+                    <button onclick="window.location.href='shop.html'">Shop Now</button>
+                    <button onclick="window.location.href='cart.html'">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="offers">
+            <div><strong>CRIME THRILLER:</strong> Stephen Blackmoore's dark urban fantasy series follows necromancer Eric Carter through a world of vengeful gods and goddesses, mysterious murders, and restless ghosts. <a href="#">See All</a></div>
+            <div><strong>Partner Offers:</strong> Get GST invoice and save up to 10% on business purchases. <a href="#">Sign up for free</a> | <a href="#">Details</a></div>
+        </div>
+        <div class="shipping-info">
+            <div>Free Delivery</div>
+            <div>10 days Replacement</div>
+            <div>Amazon Delivered</div>
+            <div>Pay on Delivery</div>
+            <div>Secure transaction</div>
+        </div>
+        <div class="description">
+            <p>Necromancer is such an ugly word, but it's a title Eric Carter is stuck with.
+
+                He sees ghosts, talks to the dead. He's turned it into a lucrative career putting troublesome spirits to rest, sometimes taking on even more dangerous things. For a fee, of course.
+                
+                When he left LA fifteen years ago, he thought he'd never go back. Too many bad memories. Too many people trying to kill him.
+                
+                But now his sister's been brutally murdered and Carter wants to find out why.
+                
+                Was it the gangster looking to settle a score? The ghost of a mage he killed the night he left town? 
+                </p>
+        </div>
+        <div class="follow-authors">
+            <p><strong>Follow the authors</strong></p>
+            <button>Stephen Blackmoore</button>  
+        </div>
+    </div>
+</body>
+</html>

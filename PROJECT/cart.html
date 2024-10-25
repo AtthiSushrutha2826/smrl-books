@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Amazon.in</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        .cart-item h3 {
+            margin: 0;
+        }
+        .total {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .checkout-button {
+            background-color: #ff9900;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .checkout-button:hover {
+            background-color: #e68a00;
+        }
+    </style>
+    <script>
+        // Function to display cart items
+        function displayCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartContainer = document.getElementById('cart-items');
+            const totalContainer = document.getElementById('total');
+            let totalPrice = 0;
+
+            // Clear existing items
+            cartContainer.innerHTML = '';
+
+            // Display each item in the cart
+            cart.forEach((item, index) => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <h3>${item.title} by ${item.author}</h3>
+                    <p>Price: ₹${item.price}</p>
+                `;
+                cartContainer.appendChild(itemElement);
+                totalPrice += item.price;
+            });
+
+            // Display total price
+            totalContainer.innerText = `Total: ₹${totalPrice.toFixed(2)}`;
+        }
+
+        // Call the displayCart function on page load
+        window.onload = displayCart;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Cart</h1>
+        <div id="cart-items"></div>
+        <div id="total" class="total"></div>
+        <button class="checkout-button" onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+    </div>
+</body>
+</html>

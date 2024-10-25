@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in HTML</title>
+    <link rel="stylesheet" href="styling.css">
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .navbar {
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    
+    .navbar h1 {
+        margin: 0;
+    }
+    
+    .navbarlinks a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    
+    .navbarlinks {
+        display: flex;
+    }
+    
+    .registration-container {
+        background-color: black;
+        color: antiquewhite;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        margin: 20px auto;
+        width: 50%;
+        flex: 1;
+    }
+    
+    fieldset {
+        border: none;
+    }
+    
+    legend {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    
+    label, input, textarea {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+    
+    input[type="text"], input[type="email"], input[type="password"], textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .gender-label {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        margin: 10px auto;
+    }
+    
+    .gender-label input[type="radio"] {
+        width: 20px; /* Adjust the size here */
+        height: 20px; /* Adjust the size here */
+        margin: 0 5px;
+        vertical-align: middle;
+    }
+    
+    .gender-label label {
+        margin: 0 10px;
+    }
+    /*
+    .footer {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+    
+    .footer h2 {
+        margin: 0;
+    }
+    
+    .footer p {
+        margin: 5px 0;
+    }
+    
+    .footericon i {
+        margin: 0 5px;
+    }*/
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>SMRL</h1>
+        <div class="navbarlinks">
+            <p><a href="project.html">Home</a></p>
+            <p><a href="collection.html">Collections</a></p>
+            <p><a href="signup.html">Sign Up</a></p>
+        </div>
+    </nav>
+
+    <div class="registration-container">
+        <h2>Registration Form</h2>
+        <form>
+            <fieldset>
+                
+                <label>Enter your full name</label>
+                <input type="text" name="name">
+
+                <label>Enter your email</label>
+                <input type="email" name="email">
+
+                <label>Enter your password</label>
+                <input type="password" name="pass">
+
+                <label>Confirm your password</label>
+                <input type="password" name="pass">
+
+                <label>Enter your gender</label>
+                <div class="gender-label">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="others" name="gender" value="others">
+                    <label for="others">Others</label>
+                </div>
+
+                <label>Enter your Address:</label>
+                <textarea></textarea>
+
+                <input type="submit" value="Sign Up">
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="footer">
+        <h2>SMRL</h2>
+        <p>Best seller since 1995........</p>
+        <div class="footericon">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        <p>@2024 SMRL.com</p>
+    </div>
+</body>
+</html>
+
+
+
